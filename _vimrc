@@ -60,11 +60,11 @@ call plug#end()
 if has("gui_running") 
 "au GUIEnter * simalt ~x " 窗口启动时自动最大化 
 "set guioptions-=m " 隐藏菜单栏 
-set guioptions-=T " 隐藏工具栏 
-set guioptions-=L " 隐藏左侧滚动条 
-set guioptions-=r " 隐藏右侧滚动条 
-set guioptions-=b " 隐藏底部滚动条 
-set showtabline=0 " 隐藏Tab栏
+set guioptions-=T
+set guioptions-=L
+set guioptions-=r
+set guioptions-=b
+set showtabline=0
 
 set tabstop=4
 set noautoindent
@@ -72,10 +72,10 @@ set noautoindent
 "set guifont=Monaco\ 11
 endif
 
-set number "设置行号
-"键盘映射
+set number
+
 map <C-s> :w<CR>:e<CR>
 imap <C-s> <ESC>:w<CR>:e<CR>
-"set lines=59 columns=85 "设置初始界面大小
+"set lines=59 columns=85
 :cd D:\AppDate\Vim Dates
 
