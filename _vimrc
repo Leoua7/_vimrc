@@ -1,5 +1,7 @@
 set nocompatible
 filetype plugin on
+cd D:\AppDate\Vim Dates
+set backupdir=D:\AppDate\Vim\ Dates\tmp
 set fileencodings=utf-8,ucs-bom,cp936,big5
 set fileencoding=utf-8
 
@@ -54,12 +56,14 @@ let g:vimtex_view_general_viewer = 'SumatraPDF'
 let g:vimtex_view_general_options
     \ = '-reuse-instance -forward-search @tex @line @pdf'
 let g:vimtex_view_general_options_latexmk = '-reuse-instance'
-
+set conceallevel=1
+let g:tex_conceal='abdmg'
+Plug 'rsmenon/vim-mathematica'
 call plug#end()
 
 if has("gui_running") 
-"au GUIEnter * simalt ~x " ´°¿ÚÆô¶¯Ê±×Ô¶¯×î´ó»¯ 
-"set guioptions-=m " Òş²Ø²Ëµ¥À¸ 
+"au GUIEnter * simalt ~x " çª—å£å¯åŠ¨æ—¶è‡ªåŠ¨æœ€å¤§åŒ– 
+"set guioptions-=m " éšè—èœå•æ  
 set guioptions-=T
 set guioptions-=L
 set guioptions-=r
@@ -68,7 +72,7 @@ set showtabline=0
 
 set tabstop=4
 set noautoindent
-"×ÖÌå
+"å­—ä½“
 "set guifont=Monaco\ 11
 endif
 
@@ -76,6 +80,8 @@ set number
 
 map <C-s> :w<CR>:e<CR>
 imap <C-s> <ESC>:w<CR>:e<CR>
-"set lines=59 columns=85
-:cd D:\AppDate\Vim Dates
+"set lines=59 columns=80
 
+"å–æ¶ˆBeep
+set vb t_vb=
+au GuiEnter * set t_vb=
